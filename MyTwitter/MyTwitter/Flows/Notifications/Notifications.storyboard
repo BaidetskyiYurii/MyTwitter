@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notifications-->
+        <scene sceneID="fSn-3U-HpB">
+            <objects>
+                <navigationController storyboardIdentifier="NotificationNavigationController" id="SZm-u0-vI7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notifications" image="icon.tabbar.notification" selectedImage="icon.tabbar.selected.notification" id="xa2-yp-CAc"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PnH-H1-l6f">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="RNh-dd-Cq7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FjN-a3-zos" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45" y="45"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="NotificationViewController" id="Y6W-OH-hqX" customClass="NotificationViewController" customModule="MyTwitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4fl-lk-rXq">
+                                <rect key="frame" x="0.0" y="91" width="390" height="44"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EDN-DF-hcQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="32"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <segments>
+                                            <segment title="All"/>
+                                            <segment title="Mentions"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="tabDidChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="95U-Bv-0lN"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Qm-rx-Adm">
+                                        <rect key="frame" x="0.0" y="31" width="390" height="13"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5nz-iq-IJw"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="EsO-NL-pfy"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IyY-ih-1GG">
+                                <rect key="frame" x="0.0" y="135" width="390" height="709"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="secondaryBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4fl-lk-rXq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="1uZ-Cw-2ir"/>
+                            <constraint firstAttribute="bottom" secondItem="IyY-ih-1GG" secondAttribute="bottom" id="3RE-I9-IaH"/>
+                            <constraint firstItem="4fl-lk-rXq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="48f-Ve-xt1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4fl-lk-rXq" secondAttribute="trailing" id="6Uz-pH-fvJ"/>
+                            <constraint firstItem="4fl-lk-rXq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="DY8-Ab-j4N"/>
+                            <constraint firstItem="4fl-lk-rXq" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="IlR-OZ-6Ga"/>
+                            <constraint firstItem="IyY-ih-1GG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Uaz-kI-fhi"/>
+                            <constraint firstItem="IyY-ih-1GG" firstAttribute="top" secondItem="4fl-lk-rXq" secondAttribute="bottom" id="blS-vA-mLJ"/>
+                            <constraint firstItem="4fl-lk-rXq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="kan-kD-4P4"/>
+                            <constraint firstItem="IyY-ih-1GG" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="wJK-51-HLb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notifications" largeTitleDisplayMode="never" id="K7Y-SI-ASg">
+                        <barButtonItem key="leftBarButtonItem" image="icon.account" id="VED-1f-FJq"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icon.navbar" id="D0p-hD-2WO">
+                            <color key="tintColor" name="primaryColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="containerView" destination="IyY-ih-1GG" id="H4u-nX-Efb"/>
+                        <outlet property="notificationSegment" destination="EDN-DF-hcQ" id="fnN-pv-Fgf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942" y="-30"/>
+        </scene>
+        <!--Mentions View Controller-->
+        <scene sceneID="TKZ-01-npO">
+            <objects>
+                <viewController storyboardIdentifier="MentionsViewController" id="4Pb-K7-Qdw" customClass="MentionsViewController" customModule="MyTwitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QQs-40-0zS">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dbs-9U-0uf">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rAy-wh-V75"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dbs-9U-0uf" firstAttribute="trailing" secondItem="rAy-wh-V75" secondAttribute="trailing" id="KOi-95-pbB"/>
+                            <constraint firstItem="Dbs-9U-0uf" firstAttribute="leading" secondItem="rAy-wh-V75" secondAttribute="leading" id="SYr-Aj-B5t"/>
+                            <constraint firstItem="Dbs-9U-0uf" firstAttribute="top" secondItem="QQs-40-0zS" secondAttribute="top" id="njh-kC-oi7"/>
+                            <constraint firstAttribute="bottom" secondItem="Dbs-9U-0uf" secondAttribute="bottom" id="ukZ-J7-o9G"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Dbs-9U-0uf" id="KbH-sE-OXA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWJ-zH-DZy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1849.2307692307691" y="327.7251184834123"/>
+        </scene>
+        <!--All Notifactions View Controller-->
+        <scene sceneID="dS2-fH-04b">
+            <objects>
+                <viewController storyboardIdentifier="AllNotifactionsViewController" id="82b-wl-QBC" customClass="AllNotifactionsViewController" customModule="MyTwitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mPU-8u-mNL">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RFV-e0-iWt">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a67-Pw-ciT"/>
+                        <color key="backgroundColor" name="primaryBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RFV-e0-iWt" firstAttribute="leading" secondItem="a67-Pw-ciT" secondAttribute="leading" id="cKU-r9-0Mf"/>
+                            <constraint firstAttribute="trailing" secondItem="RFV-e0-iWt" secondAttribute="trailing" id="pzZ-9z-8sJ"/>
+                            <constraint firstAttribute="bottom" secondItem="RFV-e0-iWt" secondAttribute="bottom" id="qqq-D0-fud"/>
+                            <constraint firstItem="RFV-e0-iWt" firstAttribute="top" secondItem="mPU-8u-mNL" secondAttribute="top" id="zS6-uH-tUY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="RFV-e0-iWt" id="UaC-IU-R7s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="swk-NW-4hF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1884.6153846153845" y="-350.47393364928911"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon.account" width="32" height="32"/>
+        <image name="icon.navbar" width="22" height="22"/>
+        <image name="icon.tabbar.notification" width="20" height="20"/>
+        <image name="icon.tabbar.selected.notification" width="20" height="20"/>
+        <namedColor name="primaryBackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryColor">
+            <color red="0.29800000786781311" green="0.62000000476837158" blue="0.92199999094009399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondaryBackgroundColor">
+            <color red="0.90600001811981201" green="0.92500001192092896" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
