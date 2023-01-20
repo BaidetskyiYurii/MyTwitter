@@ -42,7 +42,7 @@
         <scene sceneID="0Il-Ns-dO4">
             <objects>
                 <viewControllerPlaceholder storyboardName="Search" referencedIdentifier="SearchNavigationController" id="q8B-4F-MBs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 6" image="square.and.arrow.up.circle.fill" catalog="system" id="DeB-Kn-Ksv"/>
+                    <tabBarItem key="tabBarItem" title="" id="DeB-Kn-Ksv"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ct0-Ox-TZK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,7 +70,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="primaryBackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

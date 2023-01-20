@@ -31,6 +31,8 @@
 		6344F5A12915A019003CFA7D /* TwitterDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6344F5A02915A019003CFA7D /* TwitterDataHelper.swift */; };
 		63CE0F4729216A5100896A80 /* MentionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CE0F4529216A5100896A80 /* MentionsTableViewCell.swift */; };
 		63CE0F4829216A5100896A80 /* MentionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CE0F4629216A5100896A80 /* MentionsTableViewCell.xib */; };
+		63F0B68C297B303A004B4903 /* TrendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F0B68A297B303A004B4903 /* TrendsTableViewCell.swift */; };
+		63F0B68D297B303A004B4903 /* TrendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F0B68B297B303A004B4903 /* TrendsTableViewCell.xib */; };
 		63F25CD4291AD94E00FDB522 /* Followers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F25CD3291AD94E00FDB522 /* Followers.swift */; };
 		63F25CD6291ADB0000FDB522 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F25CD5291ADB0000FDB522 /* Post.swift */; };
 		63F25CD9291ADFE200FDB522 /* RecentSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F25CD7291ADFE200FDB522 /* RecentSearchTableViewCell.swift */; };
@@ -87,6 +89,8 @@
 		6344F5A02915A019003CFA7D /* TwitterDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterDataHelper.swift; sourceTree = "<group>"; };
 		63CE0F4529216A5100896A80 /* MentionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentionsTableViewCell.swift; sourceTree = "<group>"; };
 		63CE0F4629216A5100896A80 /* MentionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MentionsTableViewCell.xib; sourceTree = "<group>"; };
+		63F0B68A297B303A004B4903 /* TrendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsTableViewCell.swift; sourceTree = "<group>"; };
+		63F0B68B297B303A004B4903 /* TrendsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendsTableViewCell.xib; sourceTree = "<group>"; };
 		63F25CD3291AD94E00FDB522 /* Followers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Followers.swift; sourceTree = "<group>"; };
 		63F25CD5291ADB0000FDB522 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		63F25CD7291ADFE200FDB522 /* RecentSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -218,8 +222,7 @@
 		1F65F90129119D3600302B59 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				1F65F90229119E4C00302B59 /* SearchViewController.swift */,
-				1F65F90929119EE900302B59 /* Search.storyboard */,
+				63F0B688297B2DE6004B4903 /* Views */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -266,6 +269,25 @@
 				6344F5A02915A019003CFA7D /* TwitterDataHelper.swift */,
 			);
 			path = TwitterDataHelper;
+			sourceTree = "<group>";
+		};
+		63F0B688297B2DE6004B4903 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F65F90229119E4C00302B59 /* SearchViewController.swift */,
+				1F65F90929119EE900302B59 /* Search.storyboard */,
+				63F0B689297B3005004B4903 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		63F0B689297B3005004B4903 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				63F0B68A297B303A004B4903 /* TrendsTableViewCell.swift */,
+				63F0B68B297B303A004B4903 /* TrendsTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		63F25CCF291AD78D00FDB522 /* Views */ = {
@@ -417,6 +439,7 @@
 				63F25CDE291ADFF400FDB522 /* PostTableViewCell.xib in Resources */,
 				1F65F8F82911975C00302B59 /* Notifications.storyboard in Resources */,
 				63F25CE2291AE9BC00FDB522 /* FollowersCollectionViewCell.xib in Resources */,
+				63F0B68D297B303A004B4903 /* TrendsTableViewCell.xib in Resources */,
 				1F65F8CE2911956D00302B59 /* Assets.xcassets in Resources */,
 				63F25CDA291ADFE200FDB522 /* RecentSearchTableViewCell.xib in Resources */,
 				6344F59E29159486003CFA7D /* TwitterTextTableViewCell.xib in Resources */,
@@ -455,6 +478,7 @@
 				63F25CD6291ADB0000FDB522 /* Post.swift in Sources */,
 				6344F5A12915A019003CFA7D /* TwitterDataHelper.swift in Sources */,
 				63F25CD9291ADFE200FDB522 /* RecentSearchTableViewCell.swift in Sources */,
+				63F0B68C297B303A004B4903 /* TrendsTableViewCell.swift in Sources */,
 				63CE0F4729216A5100896A80 /* MentionsTableViewCell.swift in Sources */,
 				1F9841DD2915865B00763278 /* MentionsViewController.swift in Sources */,
 				63F25CDD291ADFF400FDB522 /* PostTableViewCell.swift in Sources */,
@@ -646,8 +670,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -656,9 +680,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.test.MyTwitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -674,8 +701,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -684,9 +711,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.test.MyTwitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
