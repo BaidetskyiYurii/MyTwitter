@@ -1,5 +1,5 @@
 //
-//  SearchViewController.swift
+//  MessagesViewController.swift
 //  MyTwitter
 //
 //  Created by Lesia Vorozhbyt on 01.11.2022.
@@ -7,50 +7,46 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class MessagesViewController: UIViewController {
     
-    private let cellIdentifier = "TrendsTableViewCell"
+    private let cellIdentifier = "MessagesTableViewCell"
     
-    @IBOutlet var searchBar: UISearchBar!
+    var messagesArray = TwitterDataHelper.shared.mockMessages()
+
+    @IBOutlet weak var searchBarOutlet: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setSearchBar()
         configTableView()
-    }
-    
-    private func setSearchBar() {
-        self.navigationItem.titleView = searchBar
-        searchBar.placeholder = "Search Twitter"
     }
     
     private func configTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.reloadData()
         tableView.register(UINib(nibName: cellIdentifier, bundle: nil),
                            forCellReuseIdentifier: cellIdentifier)
     }
 }
 
-extension SearchViewController: UITableViewDelegate {
+extension MessagesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
-            return 201
-        }
-        return 100
+        80
     }
 }
 
-extension SearchViewController: UITableViewDataSource {
+extension MessagesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        messagesArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TrendsTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MessagesTableViewCell else {
             return UITableViewCell()
         }
-        return cell
+        let message = messagesArray[indexPath.row]
+        cell.configCell(with: message)
+       return cell
     }
 }

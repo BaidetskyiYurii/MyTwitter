@@ -44,7 +44,7 @@ class HomeViewController: UIViewController {
     
     private func loadData() {
         let followers = TwitterDataHelper.shared.mockFollowers()
-        var posts = TwitterDataHelper.shared.mockPost()
+        let posts = TwitterDataHelper.shared.mockPost()
         
         
         items.append(.recentSearch(followers))

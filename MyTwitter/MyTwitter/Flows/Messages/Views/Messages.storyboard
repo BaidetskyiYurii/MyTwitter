@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c2i-yP-6UE">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Messages-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="MessagesViewController" customModule="MyTwitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search for people and groups" translatesAutoresizingMaskIntoConstraints="NO" id="YQS-aF-wgm">
+                                <rect key="frame" x="16" y="91" width="358" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5tV-yR-DMW"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="LAV-A1-X3T"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Gpf-ig-HpM">
+                                <rect key="frame" x="0.0" y="141" width="390" height="620"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gpf-ig-HpM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="9rV-Kf-yjt"/>
+                            <constraint firstItem="Gpf-ig-HpM" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="R2m-8L-hJj"/>
+                            <constraint firstItem="Gpf-ig-HpM" firstAttribute="top" secondItem="YQS-aF-wgm" secondAttribute="bottom" id="eB0-za-8s7"/>
+                            <constraint firstItem="YQS-aF-wgm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="ghF-Dk-r1h"/>
+                            <constraint firstItem="Gpf-ig-HpM" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="kff-vW-YDb"/>
+                            <constraint firstItem="YQS-aF-wgm" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="rcc-2K-jCU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YQS-aF-wgm" secondAttribute="trailing" constant="16" id="s5W-kL-FUa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Messages" id="zrY-Dx-0Hh">
+                        <barButtonItem key="leftBarButtonItem" image="icon.account" id="OXD-oI-VGN"/>
+                        <barButtonItem key="rightBarButtonItem" image="icon.navbar" id="Qtw-n0-TlC"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchBarOutlet" destination="YQS-aF-wgm" id="Y2g-GW-wTO"/>
+                        <outlet property="tableView" destination="Gpf-ig-HpM" id="BHL-eP-I0u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.7692307692307" y="-2.1327014218009479"/>
+        </scene>
+        <!--Messages-->
+        <scene sceneID="cjy-Im-GAK">
+            <objects>
+                <navigationController storyboardIdentifier="MessagesNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="c2i-yP-6UE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Messages" image="icon.tabbar.message" selectedImage="icon.tabbar.selected.message" id="aTG-l2-3Yx"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kdz-wv-5r7">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="0Fc-L1-AsB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7bE-RH-0rU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.53846153846153" y="-2.1327014218009479"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon.account" width="32" height="32"/>
+        <image name="icon.navbar" width="22" height="22"/>
+        <image name="icon.tabbar.message" width="20" height="18"/>
+        <image name="icon.tabbar.selected.message" width="20" height="18"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

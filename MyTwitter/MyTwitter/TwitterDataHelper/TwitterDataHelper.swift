@@ -101,5 +101,60 @@ final class TwitterDataHelper {
         ]
     }
     
+    func mockMessages() -> [Message] {
+        return [
+            Message(userImage: "icon.user1" ,
+                    userName: "AzizDjan",
+                    userNickName: "@A_AzizDjan",
+                    lateMessageAction: "You: You’re very welcome AzizDjan!",
+                    messageDate: "12/2/19"),
+            Message(userImage: "icon.user2" ,
+                    userName: "Andrew Parker",
+                    userNickName: "@andrewww_",
+                    lateMessageAction: "You accepted the request",
+                    messageDate: "12/2/19"),
+            Message(userImage: "icon.user3" ,
+                    userName: "Komol Kuchkarov",
+                    userNickName: "@kkuchkarov",
+                    lateMessageAction: "You accepted the request",
+                    messageDate: "11/20/19"),
+            Message(userImage: "icon.user4" ,
+                    userName: "karennne",
+                    userNickName: "@karennne",
+                    lateMessageAction: "You: I would greatly appreciate if you could retweet this if you think its worthy :)",
+                    messageDate: "11/2/19"),
+            Message(userImage: "icon.user5" ,
+                    userName: "Maximillian",
+                    userNickName: "@maxjacobson",
+                    lateMessageAction: "sent you a link: Hello Pixsellz",
+                    messageDate: "11/2/19"),
+            Message(userImage: "icon.user6" ,
+                    userName: "AzizDjan",
+                    userNickName: "@A_AzizDjan",
+                    lateMessageAction: "You: You’re very welcome AzizDjan!",
+                    messageDate: "12/2/18"),
+            Message(userImage: "icon.user7" ,
+                    userName: "Andrew Parker",
+                    userNickName: "@andrewww_",
+                    lateMessageAction: "You accepted the request",
+                    messageDate: "12/2/18"),
+            Message(userImage: "icon.user8" ,
+                    userName: "Komol Kuchkarov",
+                    userNickName: "@kkuchkarov",
+                    lateMessageAction: "You accepted the request",
+                    messageDate: "11/20/18"),
+            Message(userImage: "icon.user4" ,
+                    userName: "karennne",
+                    userNickName: "@karennne",
+                    lateMessageAction: "You: I would greatly appreciate if you could retweet this if you think its worthy :)",
+                    messageDate: "11/2/18"),
+            Message(userImage: "icon.user5" ,
+                    userName: "Maximillian",
+                    userNickName: "@maxjacobson",
+                    lateMessageAction: "sent you a link: Hello Pixsellz",
+                    messageDate: "11/2/18")
+        ]
+    }
+    
 }
 

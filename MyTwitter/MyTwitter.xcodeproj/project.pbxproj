@@ -33,6 +33,9 @@
 		63CE0F4829216A5100896A80 /* MentionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CE0F4629216A5100896A80 /* MentionsTableViewCell.xib */; };
 		63F0B68C297B303A004B4903 /* TrendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F0B68A297B303A004B4903 /* TrendsTableViewCell.swift */; };
 		63F0B68D297B303A004B4903 /* TrendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F0B68B297B303A004B4903 /* TrendsTableViewCell.xib */; };
+		63F0B692297D5BFA004B4903 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F0B690297D5BFA004B4903 /* MessagesTableViewCell.swift */; };
+		63F0B693297D5BFA004B4903 /* MessagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F0B691297D5BFA004B4903 /* MessagesTableViewCell.xib */; };
+		63F0B695297D6414004B4903 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F0B694297D6414004B4903 /* Message.swift */; };
 		63F25CD4291AD94E00FDB522 /* Followers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F25CD3291AD94E00FDB522 /* Followers.swift */; };
 		63F25CD6291ADB0000FDB522 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F25CD5291ADB0000FDB522 /* Post.swift */; };
 		63F25CD9291ADFE200FDB522 /* RecentSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F25CD7291ADFE200FDB522 /* RecentSearchTableViewCell.swift */; };
@@ -91,6 +94,9 @@
 		63CE0F4629216A5100896A80 /* MentionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MentionsTableViewCell.xib; sourceTree = "<group>"; };
 		63F0B68A297B303A004B4903 /* TrendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsTableViewCell.swift; sourceTree = "<group>"; };
 		63F0B68B297B303A004B4903 /* TrendsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendsTableViewCell.xib; sourceTree = "<group>"; };
+		63F0B690297D5BFA004B4903 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
+		63F0B691297D5BFA004B4903 /* MessagesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessagesTableViewCell.xib; sourceTree = "<group>"; };
+		63F0B694297D6414004B4903 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		63F25CD3291AD94E00FDB522 /* Followers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Followers.swift; sourceTree = "<group>"; };
 		63F25CD5291ADB0000FDB522 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		63F25CD7291ADFE200FDB522 /* RecentSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -230,8 +236,7 @@
 		1F65F90429119EAC00302B59 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
-				1F65F90529119ED000302B59 /* MessagesViewController.swift */,
-				1F65F90B29119F2200302B59 /* Messages.storyboard */,
+				63F0B68E297D5BC7004B4903 /* Views */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -290,6 +295,25 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		63F0B68E297D5BC7004B4903 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F65F90529119ED000302B59 /* MessagesViewController.swift */,
+				1F65F90B29119F2200302B59 /* Messages.storyboard */,
+				63F0B68F297D5BCF004B4903 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		63F0B68F297D5BCF004B4903 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				63F0B690297D5BFA004B4903 /* MessagesTableViewCell.swift */,
+				63F0B691297D5BFA004B4903 /* MessagesTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		63F25CCF291AD78D00FDB522 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +350,7 @@
 			children = (
 				63F25CD3291AD94E00FDB522 /* Followers.swift */,
 				63F25CD5291ADB0000FDB522 /* Post.swift */,
+				63F0B694297D6414004B4903 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -448,6 +473,7 @@
 				63CE0F4829216A5100896A80 /* MentionsTableViewCell.xib in Resources */,
 				1F65F90A29119EE900302B59 /* Search.storyboard in Resources */,
 				1F65F8CC2911956B00302B59 /* Main.storyboard in Resources */,
+				63F0B693297D5BFA004B4903 /* MessagesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +505,8 @@
 				6344F5A12915A019003CFA7D /* TwitterDataHelper.swift in Sources */,
 				63F25CD9291ADFE200FDB522 /* RecentSearchTableViewCell.swift in Sources */,
 				63F0B68C297B303A004B4903 /* TrendsTableViewCell.swift in Sources */,
+				63F0B695297D6414004B4903 /* Message.swift in Sources */,
+				63F0B692297D5BFA004B4903 /* MessagesTableViewCell.swift in Sources */,
 				63CE0F4729216A5100896A80 /* MentionsTableViewCell.swift in Sources */,
 				1F9841DD2915865B00763278 /* MentionsViewController.swift in Sources */,
 				63F25CDD291ADFF400FDB522 /* PostTableViewCell.swift in Sources */,
